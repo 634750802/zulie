@@ -1,0 +1,40 @@
+{
+  "name": "zulie",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Shared store types for zustand",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "private": true,
+  "packageManager": "pnpm@10.4.1",
+  "devDependencies": {
+    "react": "^19.1.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9",
+    "zustand": "^5.0.3"
+  },
+  "peerDependencies": {
+    "zustand": "^5.0.3"
+  },
+  "exports": {
+    "./crud": {
+      "default": "./dist/crud.js",
+      "types": "./types/crud.d.ts"
+    },
+    "./crud-index": {
+      "default": "./dist/crud-index.js",
+      "types": "./types/crud-index.d.ts"
+    },
+    "./crud-remote": {
+      "default": "./dist/crud-remote.js",
+      "types": "./types/crud-remote.d.ts"
+    }
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
